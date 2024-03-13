@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "fishbowl",
+	"version": "${version}",
+	"name": "Fishbowl",
+	"description": "An origins addon, with a fish bowl!",
+	"authors": [
+		"cncallmek!"
+	],
+	"contact": {
+		"homepage": "https://twitter.com/cncallmek",
+		"sources": "https://github.com/cncallmek/Fishbowl"
+	},
+	"license": "MIT",
+	"icon": "assets/fishbowl/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cncallmek.fishbowl.Fishbowl"
+		],
+		"client": [
+			"cncallmek.fishbowl.FishbowlClient"
+		],
+		"fabric-datagen": [
+			"cncallmek.fishbowl.FishbowlDataGenerator"
+		]
+	},
+	"mixins": [
+		"fishbowl.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

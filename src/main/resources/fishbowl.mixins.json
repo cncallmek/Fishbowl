@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "cncallmek.fishbowl.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+      "FishbowlMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
