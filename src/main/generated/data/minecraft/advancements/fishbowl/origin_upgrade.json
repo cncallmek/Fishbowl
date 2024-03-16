@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:fishbowl/root",
+  "criteria": {
+    "use_orb": {
+      "trigger": "minecraft:effects_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "text": "Now do it again"
+    },
+    "frame": "task",
+    "icon": {
+      "item": "fishbowl:upgrade_orb"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Upgrade Your Origin"
+    }
+  },
+  "requirements": [
+    [
+      "use_orb"
+    ]
+  ]
+}

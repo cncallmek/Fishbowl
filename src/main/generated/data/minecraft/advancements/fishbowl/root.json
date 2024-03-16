@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "use_orb": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishbowl:upgrade_orb"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "text": "Craft an Upgrade Orb"
+    },
+    "frame": "task",
+    "icon": {
+      "item": "fishbowl:upgrade_orb"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Evolution"
+    }
+  },
+  "requirements": [
+    [
+      "use_orb"
+    ]
+  ]
+}
