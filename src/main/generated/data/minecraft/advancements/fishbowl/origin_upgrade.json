@@ -2,7 +2,12 @@
   "parent": "minecraft:fishbowl/root",
   "criteria": {
     "use_orb": {
-      "trigger": "minecraft:effects_changed"
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "fishbowl:evolve": {}
+        }
+      }
     }
   },
   "display": {

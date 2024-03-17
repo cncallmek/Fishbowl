@@ -32,6 +32,5 @@ public class ModItems {
     Fishbowl.LOGGER.info("Registering Mod Items for " + Fishbowl.MOD_ID);
 
     ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsGroup);
-    ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientsGroup);
   }
 }
