@@ -1,0 +1,11 @@
+{
+  "type": "origins:attribute",
+  "name": "Undomesticated",
+  "description": "Your ancestors never got enough nutrients, making you more fragile than a human",
+  "modifier": {
+    "name": "Undomesticated health reduction",
+    "attribute": "minecraft:generic.max_health",
+    "value": -2.0,
+    "operation": "addition"
+  }
+}

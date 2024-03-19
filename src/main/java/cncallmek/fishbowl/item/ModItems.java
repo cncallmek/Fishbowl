@@ -2,7 +2,6 @@ package cncallmek.fishbowl.item;
 
 import cncallmek.fishbowl.Fishbowl;
 import cncallmek.fishbowl.item.custom.UpgradeOrbItem;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -18,6 +17,7 @@ public class ModItems {
   private static void addItemsToToolsGroup(FabricItemGroupEntries entries) {
     entries.add(ORB);
   }
+
   private static void addItemsToIngredientsGroup(FabricItemGroupEntries entries) {
     entries.add(BONE);
   }

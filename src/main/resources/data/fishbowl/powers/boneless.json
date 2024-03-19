@@ -1,0 +1,9 @@
+{
+  "type": "origins:if_else_list",
+  "modifier": {
+    "name": "Undomesticated health reduction",
+    "attribute": "minecraft:generic.max_health",
+    "value": -2.0,
+    "operation": "addition"
+  }
+}

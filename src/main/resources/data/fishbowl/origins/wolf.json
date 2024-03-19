@@ -1,0 +1,13 @@
+{
+  "icon": {
+    "item": "minecraft:bone"
+  },
+  "name": "Wolf",
+  "description": "Who's a good boy?",
+  "impact": 1,
+  "loading_priority": 0,
+  "powers": [
+    "origins:carnivore",
+    "fishbowl:undomesticated"
+  ]
+}
