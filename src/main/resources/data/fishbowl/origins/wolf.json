@@ -8,6 +8,8 @@
   "loading_priority": 0,
   "powers": [
     "origins:carnivore",
-    "fishbowl:undomesticated"
+    "fishbowl:undomesticated",
+    "fishbowl:boneless",
+    "fishbowl:thrill_of_the_hunt"
   ]
 }

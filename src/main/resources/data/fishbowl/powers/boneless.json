@@ -1,9 +1,121 @@
 {
-  "type": "origins:if_else_list",
-  "modifier": {
-    "name": "Undomesticated health reduction",
-    "attribute": "minecraft:generic.max_health",
-    "value": -2.0,
-    "operation": "addition"
+  "type": "origins:multiple",
+  "name": "Bone lover",
+  "description": "Eating bones will give you a small health boost. Bonus amplified at higher health.",
+  "buff": {
+    "type": "origins:action_on_item_use",
+    "entity_action": {
+      "type": "origins:if_else_list",
+      "actions": [
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:resource",
+                "resource": "*:*_cooldown",
+                "comparison": ">=",
+                "compare_to": 400
+              },
+              {
+                "type": "origins:health",
+                "comparison": "<=",
+                "compare_to": 16
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:heal",
+                "amount": 2
+              },
+              {
+                "type": "origins:change_resource",
+                "resource": "*:*_cooldown",
+                "change": -400,
+                "operation": "add"
+              }
+            ]
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:resource",
+                "resource": "*:*_cooldown",
+                "comparison": ">=",
+                "compare_to": 400
+              },
+              {
+                "type": "origins:health",
+                "comparison": ">",
+                "compare_to": 16
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:apply_effect",
+                "effect": {
+                  "effect": "minecraft:absorption",
+                  "duration": 400
+                }
+              },
+              {
+                "type": "origins:change_resource",
+                "resource": "*:*_cooldown",
+                "change": -400,
+                "operation": "add"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "cooldown": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 400,
+    "start_value": 400,
+    "hud_render": {
+      "sprite_location": "origins:textures/gui/resource_bar.png",
+      "bar_index": 8,
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_cooldown",
+        "compare_to": 400,
+        "comparison": "!="
+      }
+    }
+  },
+  "cooldown_regen": {
+    "type": "origins:action_over_time",
+    "interval": 4,
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_cooldown",
+      "change": 4
+    }
+  },
+  "feed": {
+    "type": "origins:action_on_item_use",
+    "entity_action": {
+      "type": "origins:feed",
+      "food": 3.0,
+      "saturation": 1.5
+    },
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "item": "minecraft:bone"
+      }
+    }
   }
 }
